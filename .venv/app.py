@@ -37,7 +37,7 @@ def vector_embedding():
         st.session_state.embeddings_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
         
         # Load the documents from the specified directory
-        st.session_state.loader = PyPDFDirectoryLoader(r"C:\Users\DELL\OneDrive\Desktop\LLMs\gemma\data")
+        st.session_state.loader = PyPDFDirectoryLoader("../data/")
         st.session_state.docs = st.session_state.loader.load()
 
         if not st.session_state.docs:
